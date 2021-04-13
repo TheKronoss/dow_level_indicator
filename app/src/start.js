@@ -9,12 +9,14 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1600,
     height: 900,
+    icon: __dirname + '/DOW.ico',
     webPreferences: {
       nodeIntegration: true
     }
   })
 
   mainWindow.setMenuBarVisibility(false);
+
 
   mainWindow.loadURL(
     process.env.ELECTRON_START_URL ||

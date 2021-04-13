@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "dow_level_indicator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,7 @@
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
-  "homepage": "./",
+  "homepage": "http://./",
   "main": "src/start.js",
   "scripts": {
     "start": "nf start -p 3000",
@@ -95,5 +95,12 @@
         }
       ]
     }
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "keywords": [
+    "level",
+    "indicator"
+  ],
+  "author": "DOW",
+  "license": "ISC"
 }
