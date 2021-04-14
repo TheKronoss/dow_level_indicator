@@ -21,7 +21,7 @@
   "homepage": "http://./",
   "main": "src/start.js",
   "scripts": {
-    "start": "nf start -p 3000",
+    "start": "npm install foreman -g && nf start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
