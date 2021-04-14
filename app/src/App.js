@@ -3,58 +3,108 @@ import './App.css';
 import './localstorage.js'
 
 function App() {
-  return (
-    <div className="App bg-gray-100 font-sans leading-normal tracking-normal">
 
-        {/* <!-- This example requires Tailwind CSS v2.0+ --> */}
-        <div class="bg-red-500  ">
-          <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between flex-wrap">
-              <div class="w-0 flex-1 flex items-center">
-                <span class="flex p-2 rounded-lg bg-red-600">
-                  {/* <!-- Heroicon name: outline/speakerphone --> */}
-                  <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-                  </svg>
-                </span>
-                <p class="ml-3 font-medium text-white truncate">
-                  <span class="md:hidden">We announced a new product</span>
-                  <span class="hidden md:inline">A bottle is empty!</span>
-                </p>
+  return (
+
+    <div className="App font-sans leading-normal tracking-normal">
+
+
+      {/* NAV BAR */}
+      <nav id="header" className="bg-white fixed w-full z-10 top-0 shadow">
+
+
+        <div className="w-full container mx-auto flex flex-wrap items-center mt-0 pt-3 pb-3 md:pb-0">
+
+          <div className="w-1/2 pl-2 md:pl-0">
+            <a className="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-semibold">
+              <img className="" src="/DOW-logo.svg"/></a>
+          </div>
+          <div className="w-1/2 pr-0">
+            <div className="flex relative inline-block float-right">
+
+              <div className="relative text-sm">
+                <div id="userMenu" className="bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 invisible">
+                  <ul className="list-reset">
+                    <li><a href="#" className="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">My account</a></li>
+                    <li><a href="#" className="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Notifications</a></li>
+                    <li>
+                      <hr className="border-t mx-2 border-gray-400"></hr>
+                    </li>
+                    <li><a href="#" class="px-4 py-2 block text-gray-900 hover:bg-gray-400 no-underline hover:no-underline">Logout</a></li>
+                  </ul>
+                </div>
               </div>
-              <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
-                <button type="button" class="-mr-1 flex p-2 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2">
-                  <span class="sr-only">Dismiss</span>
-                  {/* <!-- Heroicon name: outline/x --> */}
-                  <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+
+
+              {/* <div class="block lg:hidden pr-4">
+                <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none">
+                  <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                   </svg>
                 </button>
-              </div>
+              </div> */}
             </div>
+
           </div>
+
+
+          <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white z-20" id="nav-content">
+            <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
+              <li class="mr-6 my-2 md:my-0">
+                <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-pink-600 no-underline hover:text-gray-900 border-b-2 border-orange-600 hover:border-orange-600">
+                  <i class="fas fa-home fa-fw mr-3 text-pink-600"></i><span class="pb-1 md:pb-0 text-sm">Home</span>
+                </a>
+              </li>
+              <li class="mr-6 my-2 md:my-0">
+                <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-pink-500">
+                  <i class="fas fa-tasks fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Tasks</span>
+                </a>
+              </li>
+              <li class="mr-6 my-2 md:my-0">
+                <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-purple-500">
+                  <i class="fa fa-envelope fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Messages</span>
+                </a>
+              </li>
+              <li class="mr-6 my-2 md:my-0">
+                <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-green-500">
+                  <i class="fas fa-chart-area fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Analytics</span>
+                </a>
+              </li>
+              <li class="mr-6 my-2 md:my-0">
+                <a href="#" class="block py-1 md:py-3 pl-1 align-middle text-gray-500 no-underline hover:text-gray-900 border-b-2 border-white hover:border-red-500">
+                  <i class="fa fa-wallet fa-fw mr-3"></i><span class="pb-1 md:pb-0 text-sm">Payments</span>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+
         </div>
+      </nav>
+
 
       {/* <!--Container--> */}
-      <div class="container w-full mx-auto pt-5 h-screen">
+      < div class="container w-full mx-auto pt-20" >
 
         <div class="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal">
 
 
           {/* <!--Console Content--> */}
 
-          <div class="flex flex-wrap">
+          <div class="flex flex-wrap ">
             <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+
 
               {/* <!--Metric Card--> */}
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
-                    <div class="rounded p-3 bg-green-600"><i class="fa fa-wallet fa-2x fa-fw fa-inverse"></i></div>
+                    <div class="rounded p-3 bg-green-600"><i class="fa fa-flask fa-2x fa-fw fa-inverse"></i></div>
                   </div>
                   <div class="flex-1 text-right md:text-center">
-                    <h5 class="font-bold uppercase text-gray-400">Total Revenue</h5>
-                    <h3 class="font-bold text-3xl text-gray-600">$3249 <span class="text-green-500"><i class="fas fa-caret-up"></i></span></h3>
+                    <h5 class="font-bold uppercase text-l text-gray-700">hydrogen fluoride</h5>
+                    <h3 class="font-semibold text-gray-400 text-2xl"><span class="text-gray-400"><i class="fas fa-weight-hanging fa-xs"></i></span> 1.1 / 3 kg</h3>
                   </div>
                 </div>
               </div>
@@ -65,11 +115,11 @@ function App() {
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
-                    <div class="rounded p-3 bg-pink-600"><i class="fas fa-users fa-2x fa-fw fa-inverse"></i></div>
+                    <div class="rounded p-3 bg-green-600"><i class="fas fa-flask fa-2x fa-fw fa-inverse"></i></div>
                   </div>
                   <div class="flex-1 text-right md:text-center">
-                    <h5 class="font-bold uppercase text-gray-400">Total Users</h5>
-                    <h3 class="font-bold text-3xl text-gray-600">249 <span class="text-pink-500"><i class="fas fa-exchange-alt"></i></span></h3>
+                    <h5 class="font-bold uppercase text-l text-gray-700">hydrogen fluoride</h5>
+                    <h3 class="font-semibold text-gray-400 text-2xl"><span class="text-gray-400"><i class="fas fa-weight-hanging fa-xs"></i></span> 1.1 / 3 kg</h3>
                   </div>
                 </div>
               </div>
@@ -80,11 +130,11 @@ function App() {
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
-                    <div class="rounded p-3 bg-yellow-600"><i class="fas fa-user-plus fa-2x fa-fw fa-inverse"></i></div>
+                    <div class="rounded p-3 bg-green-600"><i class="fas fa-flask fa-2x fa-fw fa-inverse"></i></div>
                   </div>
                   <div class="flex-1 text-right md:text-center">
-                    <h5 class="font-bold uppercase text-gray-400">New Users</h5>
-                    <h3 class="font-bold text-3xl text-gray-600">2 <span class="text-yellow-600"><i class="fas fa-caret-up"></i></span></h3>
+                    <h5 class="font-bold uppercase text-l text-gray-700">hydrogen fluoride</h5>
+                    <h3 class="font-semibold text-gray-400 text-2xl"><span class="text-gray-400"><i class="fas fa-weight-hanging fa-xs"></i></span> 1.1 / 3 kg</h3>
                   </div>
                 </div>
               </div>
@@ -95,11 +145,11 @@ function App() {
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
-                    <div class="rounded p-3 bg-blue-600"><i class="fas fa-server fa-2x fa-fw fa-inverse"></i></div>
+                    <div class="rounded p-3 bg-green-600"><i class="fas fa-flask fa-2x fa-fw fa-inverse"></i></div>
                   </div>
                   <div class="flex-1 text-right md:text-center">
-                    <h5 class="font-bold uppercase text-gray-400">Server Uptime</h5>
-                    <h3 class="font-bold text-3xl text-gray-600">152 days</h3>
+                    <h5 class="font-bold uppercase text-l text-gray-700">hydrogen fluoride</h5>
+                    <h3 class="font-semibold text-gray-400 text-2xl"><span class="text-gray-400"><i class="fas fa-weight-hanging fa-xs"></i></span> 1.1 / 3 kg</h3>
                   </div>
                 </div>
               </div>
@@ -110,11 +160,11 @@ function App() {
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
-                    <div class="rounded p-3 bg-indigo-600"><i class="fas fa-tasks fa-2x fa-fw fa-inverse"></i></div>
+                    <div class="rounded p-3 bg-green-600"><i class="fas fa-flask fa-2x fa-fw fa-inverse"></i></div>
                   </div>
                   <div class="flex-1 text-right md:text-center">
-                    <h5 class="font-bold uppercase text-gray-400">To Do List</h5>
-                    <h3 class="font-bold text-3xl text-gray-600">7 tasks</h3>
+                    <h5 class="font-bold uppercase text-l text-gray-700">hydrogen fluoride</h5>
+                    <h3 class="font-semibold text-gray-400 text-2xl"><span class="text-gray-400"><i class="fas fa-weight-hanging fa-xs"></i></span> 1.1 / 3 kg</h3>
                   </div>
                 </div>
               </div>
@@ -125,11 +175,11 @@ function App() {
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
-                    <div class="rounded p-3 bg-red-600"><i class="fas fa-inbox fa-2x fa-fw fa-inverse"></i></div>
+                    <div class="rounded p-3 bg-green-600"><i class="fas fa-flask fa-2x fa-fw fa-inverse"></i></div>
                   </div>
                   <div class="flex-1 text-right md:text-center">
-                    <h5 class="font-bold uppercase text-gray-400">Issues</h5>
-                    <h3 class="font-bold text-3xl text-gray-600">3 <span class="text-red-500"><i class="fas fa-caret-up"></i></span></h3>
+                    <h5 class="font-bold uppercase text-l text-gray-700">hydrogen fluoride</h5>
+                    <h3 class="font-semibold text-gray-400 text-2xl"><span class="text-gray-400"><i class="fas fa-weight-hanging fa-xs"></i></span> 1.1 / 3 kg</h3>
                   </div>
                 </div>
               </div>
@@ -137,37 +187,42 @@ function App() {
             </div>
           </div>
 
+
+
+
           {/* <!--Divider--> */}
           <hr class="border-b-2 border-gray-200 my-8 mx-4"></hr>
 
           <div class="flex flex-row flex-wrap flex-grow mt-2">
 
-            <div class="w-full md:w-1/2 p-3">
-              {/* <!--Graph Card--> */}
-              <div class="bg-white border rounded shadow">
-                <div class="border-b p-3">
-                  <h5 class="font-bold uppercase text-gray-600">Graph</h5>
-                </div>
-                <div class="p-5">
-                  <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
+            <div class="hidden">
+              <div class="w-full md:w-1/2 p-3">
+                {/* <!--Graph Card--> */}
+                <div class="bg-white border rounded shadow">
+                  <div class="border-b p-3">
+                    <h5 class="font-bold uppercase text-gray-600">Graph</h5>
+                  </div>
+                  <div class="p-5">
+                    <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
 
+                  </div>
                 </div>
+                {/* <!--/Graph Card--> */}
               </div>
-              {/* <!--/Graph Card--> */}
-            </div>
 
-            <div class="w-full md:w-1/2 p-3">
-              {/* <!--Graph Card--> */}
-              <div class="bg-white border rounded shadow">
-                <div class="border-b p-3">
-                  <h5 class="font-bold uppercase text-gray-600">Graph</h5>
-                </div>
-                <div class="p-5">
-                  <canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined"></canvas>
+              <div class="w-full md:w-1/2 p-3">
+                {/* <!--Graph Card--> */}
+                <div class="bg-white border rounded shadow">
+                  <div class="border-b p-3">
+                    <h5 class="font-bold uppercase text-gray-600">Graph</h5>
+                  </div>
+                  <div class="p-5">
+                    <canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined"></canvas>
 
+                  </div>
                 </div>
+                {/* <!--/Graph Card--> */}
               </div>
-              {/* <!--/Graph Card--> */}
             </div>
 
             <div class="w-full p-3">
@@ -193,10 +248,10 @@ function App() {
         </div>
 
 
-      </div>
+      </div >
       {/* <!--/container--> */}
 
-    </div>
+    </div >
   );
 }
 
