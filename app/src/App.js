@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './localstorage.js'
@@ -24,7 +25,9 @@ function App() {
 
           <div class="flex flex-row flex-wrap flex-grow mt-2">
 
-            <div class="w-full md:w-1/2 p-3">
+            <div id="container"></div>
+
+            <div class="w-1/2 p-3">
               {/* <!--Graph Card--> */}
               <div class="bg-white border rounded shadow">
                 <div class="border-b p-3">
@@ -32,20 +35,6 @@ function App() {
                 </div>
                 <div class="p-5">
                   <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
-
-                </div>
-              </div>
-              {/* <!--/Graph Card--> */}
-            </div>
-
-            <div class="w-full md:w-1/2 p-3">
-              {/* <!--Graph Card--> */}
-              <div class="bg-white border rounded shadow">
-                <div class="border-b p-3">
-                  <h5 class="font-bold uppercase text-gray-600">Graph</h5>
-                </div>
-                <div class="p-5">
-                  <canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined"></canvas>
 
                 </div>
               </div>

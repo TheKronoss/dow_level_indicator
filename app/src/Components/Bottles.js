@@ -8,7 +8,7 @@ export default function Bottles() {
 
           <div class="flex flex-wrap ">
             {/* <!--Metric Card--> */}
-            <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <div class="w-full md:w-1/2 xl:w-1/3 p-3"><a href="#">
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
@@ -20,8 +20,9 @@ export default function Bottles() {
                   </div>
                 </div>
               </div>
+              </a>
             </div>
-            <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <div class="w-full md:w-1/2 xl:w-1/3 p-3"><a href="#">
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
@@ -33,8 +34,9 @@ export default function Bottles() {
                   </div>
                 </div>
               </div>
+              </a>
             </div>
-            <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <div class="w-full md:w-1/2 xl:w-1/3 p-3"><a href="#">
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
@@ -46,8 +48,9 @@ export default function Bottles() {
                   </div>
                 </div>
               </div>
+              </a>
             </div>
-            <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <div class="w-full md:w-1/2 xl:w-1/3 p-3"><a href="#">
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
@@ -59,8 +62,9 @@ export default function Bottles() {
                   </div>
                 </div>
               </div>
+              </a>
             </div>
-            <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <div class="w-full md:w-1/2 xl:w-1/3 p-3"><a href="#">
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
@@ -72,8 +76,9 @@ export default function Bottles() {
                   </div>
                 </div>
               </div>
+              </a>
             </div>
-            <div class="w-full md:w-1/2 xl:w-1/3 p-3">
+            <div class="w-full md:w-1/2 xl:w-1/3 p-3"><a href="#">
               <div class="bg-white border rounded shadow p-2">
                 <div class="flex flex-row items-center">
                   <div class="flex-shrink pr-4">
@@ -85,6 +90,7 @@ export default function Bottles() {
                   </div>
                 </div>
               </div>
+              </a>
             </div>
           </div>
         </div>
