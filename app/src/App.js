@@ -23,11 +23,15 @@ function App() {
           {/* <!--Stripe-->  */}
           <hr class="border-b-2 border-gray-200 my-8 mx-4"></hr>
 
-          <div class="flex flex-row flex-wrap flex-grow mt-2">
+          <div class="flex flex-wrap">
 
             <div id="container"></div>
 
-            <div class="w-1/2 p-3">
+            <div class="w-full md:w-1/2 xl:w-1/2 p-3">
+              <Table></Table>
+            </div>
+
+            <div class="w-full md:w-1/2 xl:w-1/2 p-3">
               {/* <!--Graph Card--> */}
               <div class="bg-white border rounded shadow">
                 <div class="border-b p-3">
@@ -35,27 +39,12 @@ function App() {
                 </div>
                 <div class="p-5">
                   <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
-
                 </div>
               </div>
-              {/* <!--/Graph Card--> */}
             </div>
-
-            <div class="w-full p-3">
-              <Table></Table>
-            </div>
-
-
           </div>
-
-          {/* <!--/ Console Content--> */}
-
         </div>
-
-
       </div >
-      {/* <!--/container--> */}
-
     </div >
   );
 }
