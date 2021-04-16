@@ -12,10 +12,9 @@ let data = {
     "cabinet2": {
         "bottle1": ['01/01/2021', '1# fluoride', [0.8, 0.2]
         ],
-        "bottle2": ['01/01/2021', '2# carbon-dioxide', [0.7, 0.2]
+        "bottle2": ['01/01/2021', '2# carbon-dioxide', [0.9, 0.1]
         ]
     },
-
 }
 
 storage.setItem('bottleData', JSON.stringify(data))
