@@ -27,11 +27,11 @@ function App() {
 
             <div id="container"></div>
 
-            <div class="w-full md:w-1/2 xl:w-1/2 p-3">
+            <div class="w-full md:w-full xl:w-1/2 p-3">
               <Table></Table>
             </div>
 
-            <div class="w-full md:w-1/2 xl:w-1/2 p-3">
+            <div class="w-full md:w-full xl:w-1/2 p-3">
               {/* <!--Graph Card--> */}
               <div class="bg-white border rounded shadow">
                 <div class="border-b p-3">
