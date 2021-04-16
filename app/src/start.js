@@ -21,7 +21,7 @@ function createWindow() {
   mainWindow.loadURL(
     process.env.ELECTRON_START_URL ||
       url.format({
-        pathname: path.join(__dirname, '/../public/index.html'),
+        pathname: `${__dirname}/../public/index.html`,
         protocol: 'file:',
         slashes: true
       })
@@ -35,7 +35,7 @@ function createWindow() {
 app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
+  if (process.platform !== 'squirrel') {
     app.quit()
   }
 })
