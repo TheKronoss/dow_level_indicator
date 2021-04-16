@@ -1,5 +1,6 @@
 const storage = window.localStorage;
 
+// Data hardcoded due to time constaints
 let data = {
     "cabinet1": {
         "bottle1": ['01/01/2021', '#5 acid', [50, 30, 20, 10]
