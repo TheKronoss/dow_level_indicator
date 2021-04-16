@@ -35,7 +35,7 @@ function App() {
               {/* <!--Graph Card--> */}
               <div class="bg-white border rounded shadow">
                 <div class="border-b p-3">
-                  <h5 class="font-bold uppercase text-gray-600">Graph</h5>
+                  <h5 class="font-bold uppercase text-gray-600">Bottle volume over time</h5>
                 </div>
                 <div class="p-5">
                   <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
