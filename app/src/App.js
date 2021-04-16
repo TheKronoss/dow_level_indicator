@@ -34,8 +34,8 @@ function App() {
             <div class="w-full md:w-full xl:w-1/2 p-3">
               {/* <!--Graph Card--> */}
               <div class="bg-white border rounded shadow">
-                <div class="border-b p-3">
-                  <h5 class="font-bold uppercase text-gray-600">Bottle volume over time</h5>
+                <div class="border-b rounded bg-gray-50">
+                  <h5 class="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Bottle volume over time</h5>
                 </div>
                 <div class="p-5">
                   <canvas id="chartjs-7" class="chartjs" width="undefined" height="undefined"></canvas>
