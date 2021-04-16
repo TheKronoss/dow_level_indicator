@@ -25,8 +25,8 @@ export default function TableContent() {
         return ((_new - _old) / _old) * 100 > 10 ? applyGreen() : applyRed();
     }
 
-    let applyGreen = () => { colour = 'bg-green-100 text-green-800'; innerText = 'clear'; }
-    let applyRed = () => { colour = 'bg-red-100 text-red-800'; innerText = 'refill'; }
+    let applyGreen = () => { colour = 'px-2 inline-flex text-xs leading-5 font-semibold bg-green-100 text-green-800 rounded-full'; innerText = 'clear'; }
+    let applyRed = () => { colour = 'px-2 inline-flex text-xs leading-5 font-semibold bg-red-100 text-red-800 rounded-full'; innerText = 'refill'; }
 
     applyLabels();
 
@@ -36,7 +36,7 @@ export default function TableContent() {
             <td class="px-6 text-left py-4 whitespace-nowrap text-sm text-gray-500">{parseSearch[1]}</td>
             <td class="px-6 text-left py-4 whitespace-nowrap text-sm text-gray-500">{_new} / {_old} kg</td>
             <td id='status' class="px-6 text-left py-4 whitespace-nowrap text-gray-500">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full" class={colour}>
+                <span class={colour}>
                     {innerText}
                 </span>
             </td>
